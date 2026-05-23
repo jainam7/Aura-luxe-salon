@@ -1,39 +1,60 @@
 # Aura Unisex Salon (Luxury Salon Client SPA)
 
-Representative multi-page unisex salon website designed and optimized for the Canadian luxury hospitality market. Featuring robust date-formatting, pre-tax HST disclaimers, custom calendar controls, and automated multi-step booking structures.
+A polished single-page salon website built with React + Vite, crafted for a premium Canadian unisex salon experience. The app includes a luxury landing page, interactive service booking flow, animated feature sections, and a contact/reservation layout.
 
-## 🛠️ Tech Stack & Architecture
+## 🧩 What’s Included
 
-- **Framework**: React + Vite (Single Page App Layout)
-- **Styling**: Tailwind CSS v4 (Custom Neutral & Warm Champagne design palette)
-- **Animations**: Framer Motion / Motion for smooth page transition Reveals and scroll effects
-- **Icons**: Lucide React
-- **Typography pairing**: *Cormorant Garamond* (Elegant Serif Headings), *DM Sans* (Body Text) paired with *Italiana* (Luxury Accent)
-- **Canadian Focus**: Direct pre-tax HST (13%) warnings, full Interac/AMEX/Visa payment cards, statutory holidays check warning, en-CA date and CA$ CAD price utility structures.
+- **Single-page app** with tab-based content navigation
+- **Interactive home experience** with hero, marquee ticker, testimonials, transformation gallery, and social feed cards
+- **Service discovery grid** with service selection and preselection flow
+- **Multi-step booking wizard** with calendar selection, stylist choices, and reservation summary
+- **About section** with curated space showcases and brand storytelling
+- **Contact view** for customer messaging and business details
+- **Custom cursor** and loading screen for polished UX
+- **Responsive layout** with Tailwind CSS utility styling
 
-## ✨ Core Features & Pages
+## 🛠️ Tech Stack
 
-1. **🏠 Home / Landing**: Full-viewport cinematic image background, interactive featured services carousel with navigation, animated metrics counters, guest testimonials sliders, scrolling promotional ticker tape, and immersive social galleries.
-2. **💇 Curated Services Menu**: Category-filtered service lists (Hair Care, Barbering, Facials, Nails, Massage, Bridal, and Packages), search query bar, and instant booking triggers that pass values seamlessly to the reservation engine.
-3. **👥 About Story**: Legacy timeline milestones (2016 - 2024), expert stylist bios with EN/FR bilingual accessibility badges and specialties, and core hygienic value indicators.
-4. **📅 Multi-Step Wizard Booking**: 4-step wizard:
-   - *Step 1*: Service Search/Filters
-   - *Step 2*: Stylist Selector with experience records
-   - *Step 3*: Custom Localized Calendar (Sunday closed warning + Monday closed check) classified into Morning, Afternoon, and Evening slots.
-   - *Step 4*: Details Validation (Canadian phone formatting rules of `(XXX) XXX-XXXX` & mail checks).
-   - *Modal*: Gorgeous confirmation card detailing generated reference IDs, pricing logs with HST warnings, and next steps guidance.
-5. **📞 Contacts & FAQs**: Split dual-form panel with direct messaging state, embedded Toronto CN Tower area leaflet locator, business hours tables, and accordion FAQ logs answering payment support and cancellations policies.
+- **React** 19
+- **Vite** 6
+- **TypeScript**
+- **Tailwind CSS** 4
+- **Motion** for animation
+- **Lucide React** icons
+- **Express** and **dotenv** included in dependencies for future backend support
 
-## ⚙️ Local Development Setup
+## 📁 Project Structure
 
-To run the application locally on your device, execute:
+- `src/App.tsx` — app shell, tab navigation, home states, and selected service handling
+- `src/main.tsx` — Vite React entry point
+- `src/components/layout/` — `Navbar`, `Footer`, `CustomCursor`, `LoadingScreen`
+- `src/components/home/` — `HeroSection`, `TransformationShowcase`, `ServicesCarousel`, `StatsCounter`, `Testimonials`, `CTABanner`
+- `src/components/services/ServicesGrid.tsx` — grid-driven service selection
+- `src/components/about/AboutView.tsx` — brand story and space showcase
+- `src/components/reservation/BookingWizard.tsx` — multi-step reservation workflow
+- `src/components/contact/ContactView.tsx` — contact and inquiry view
+- `src/components/shared/AnimatedSection.tsx` — reusable reveal animation wrapper
+- `src/lib/` — shared constants and formatters
+
+## 🚀 Run Locally
 
 ```bash
-# 1. Install dependencies
 npm install
-
-# 2. Boot up development server
 npm run dev
 ```
 
-Open the local preview server at `http://localhost:3000` to interact with custom animations and layout grids.
+Then open the local app at `http://localhost:3000`.
+
+## 📦 Available Scripts
+
+- `npm run dev` — start the development server
+- `npm run build` — build the production bundle
+- `npm run preview` — preview the production build
+- `npm run clean` — remove generated build files
+- `npm run lint` — run TypeScript type checking
+
+## ✨ Notes
+
+- The app is optimized for a luxury salon brand presentation with modern motion effects and polished UI elements.
+- The booking flow includes service preselection and tab-based navigation to simulate a salon appointment experience.
+- The project includes a `.gitattributes` file and a clean `.gitignore` for development.
