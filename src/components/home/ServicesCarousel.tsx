@@ -1,7 +1,17 @@
 import { useRef } from "react";
-import { Scissors, Sparkles, Brush, Layers, Heart, Waves, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Scissors,
+  Sparkles,
+  Brush,
+  Layers,
+  Heart,
+  Waves,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 import { formatCAD } from "../../lib/formatters";
 import AnimatedSection from "../shared/AnimatedSection";
+import stylingBalayageFoils from "../../assets/images/styling_balayage_foils_1779553403460.png";
 
 interface ServicesCarouselProps {
   onInteract: (targetTab: string) => void;
@@ -13,42 +23,47 @@ const FEATURED_HIGHLIGHTS = [
     name: "Women's Haircut & Blow-dry",
     price: 65,
     desc: "Bespoke scissor design backed by customized shampoo treatments and high-volume blowouts.",
-    bgImage: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80&w=400",
+    bgImage:
+      "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80&w=400",
   },
   {
     icon: RazorIcon, // We can define a scissor / razor layout or standard icon from Lucide
     name: "Men's Styling & Combo",
     price: 55,
     desc: "Precision taper blending coupled with premium alignment beard-trim styling and steam wellness.",
-    bgImage: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&q=80&w=400",
+    bgImage:
+      "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&q=80&w=400",
   },
   {
     icon: Brush,
     name: "Balayage & Ombre Paint",
     price: 180,
     desc: "Bespoke, hand-painted gradients designed to expand depth while maintaining root preservation.",
-    bgImage: "/src/assets/images/styling_balayage_foils_1779553403460.png",
+    bgImage: stylingBalayageFoils,
   },
   {
     icon: Layers,
     name: "Hydrating Facial Cure",
     price: 110,
     desc: "Collagen restoration, peptide serum masking, and deep mineral mist infusion for active glow.",
-    bgImage: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=400",
+    bgImage:
+      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=400",
   },
   {
     icon: Sparkles,
     name: "Gel Polish Hand Artisan",
     price: 50,
     desc: "Sculpted nail configurations topped off with ultra-gloss LED curable organic gels.",
-    bgImage: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&q=80&w=400",
+    bgImage:
+      "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&q=80&w=400",
   },
   {
     icon: Waves,
     name: "Swedish Relax Massage",
     price: 95,
     desc: "Tension relieving rhythmic massage strokes with essential botanical oils to calm overall nervous state.",
-    bgImage: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=400",
+    bgImage:
+      "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=400",
   },
 ];
 
@@ -72,20 +87,23 @@ function RazorIcon(props: any) {
   );
 }
 
-export default function ServicesCarousel({ onInteract }: ServicesCarouselProps) {
+export default function ServicesCarousel({
+  onInteract,
+}: ServicesCarouselProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
       const { scrollLeft, clientWidth } = scrollContainerRef.current;
       // Scroll by one clientWidth to smoothly paginated screen view
-      const scrollTo = direction === "left"
-        ? scrollLeft - clientWidth
-        : scrollLeft + clientWidth;
-      
+      const scrollTo =
+        direction === "left"
+          ? scrollLeft - clientWidth
+          : scrollLeft + clientWidth;
+
       scrollContainerRef.current.scrollTo({
         left: scrollTo,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
   };
@@ -93,7 +111,6 @@ export default function ServicesCarousel({ onInteract }: ServicesCarouselProps) 
   return (
     <section className="py-24 bg-[#FAF7F2] text-primary select-none px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto flex flex-col gap-12">
-        
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="max-w-xl text-center md:text-left">
@@ -104,7 +121,8 @@ export default function ServicesCarousel({ onInteract }: ServicesCarouselProps) 
               Bespoke Services Showcase
             </h3>
             <p className="text-xs sm:text-sm text-text-muted mt-3 font-light leading-relaxed">
-              Explore some of our signature luxurious treatments, designed by our master stylists. Tap "Explore Services" for current rates.
+              Explore some of our signature luxurious treatments, designed by
+              our master stylists. Tap "Explore Services" for current rates.
             </p>
           </div>
 
@@ -150,7 +168,7 @@ export default function ServicesCarousel({ onInteract }: ServicesCarouselProps) 
                   />
                   {/* Subtle dark overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-black/10 to-transparent" />
-                  
+
                   {/* Category icon indicator */}
                   <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-surface/90 backdrop-blur-sm flex items-center justify-center text-accent">
                     <IconComponent className="w-4.5 h-4.5" />
@@ -172,7 +190,7 @@ export default function ServicesCarousel({ onInteract }: ServicesCarouselProps) 
                       {item.desc}
                     </p>
                   </div>
-                  
+
                   <button
                     onClick={() => onInteract("reservation")}
                     className="mt-4 w-full py-2.5 border border-accent/20 rounded-[8px] hover:bg-accent hover:text-primary text-accent text-[11px] font-mono tracking-widest uppercase transition-colors font-medium cursor-pointer clickable"
@@ -191,10 +209,10 @@ export default function ServicesCarousel({ onInteract }: ServicesCarouselProps) 
             onClick={() => onInteract("services")}
             className="inline-flex items-center gap-1.5 text-xs font-mono tracking-widest text-accent uppercase font-bold hover:text-primary transition-colors cursor-pointer clickable border-b border-accent pb-1"
           >
-            SIGHT OUT FULL SERVICES CATALOGUE ({FEATURED_HIGHLIGHTS.length}+ CATEGORIES)
+            SIGHT OUT FULL SERVICES CATALOGUE ({FEATURED_HIGHLIGHTS.length}+
+            CATEGORIES)
           </button>
         </div>
-
       </div>
     </section>
   );

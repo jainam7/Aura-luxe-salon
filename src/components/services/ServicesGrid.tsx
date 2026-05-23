@@ -1,9 +1,23 @@
 import { useState } from "react";
-import { Search, Scissors, UserCheck, Sparkles, Smile, Clock, MapPin, Badge } from "lucide-react";
+import {
+  Search,
+  Scissors,
+  UserCheck,
+  Sparkles,
+  Smile,
+  Clock,
+  MapPin,
+  Badge,
+} from "lucide-react";
 import { SALONS_SERVICES } from "../../lib/constants";
 import { formatCAD } from "../../lib/formatters";
 import AnimatedSection from "../shared/AnimatedSection";
 import { motion } from "motion/react";
+import luxurySalonWash from "../../assets/images/luxury_salon_wash_1779553381429.png";
+import luxuryStylingChair from "../../assets/images/luxury_styling_chair_1779553424756.png";
+import manTransformation from "../../assets/images/man_transformation_1779552943470.png";
+import stylingBalayageFoils from "../../assets/images/styling_balayage_foils_1779553403460.png";
+import womanTransformation from "../../assets/images/woman_transformation_1779552923773.png";
 
 interface ServicesGridProps {
   onSelectService: (serviceName: string) => void;
@@ -20,7 +34,9 @@ const CATEGORIES = [
   { label: "📦 Special Packages", value: "Packages" },
 ];
 
-export default function ServicesInteractiveGrid({ onSelectService }: ServicesGridProps) {
+export default function ServicesInteractiveGrid({
+  onSelectService,
+}: ServicesGridProps) {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -30,7 +46,7 @@ export default function ServicesInteractiveGrid({ onSelectService }: ServicesGri
       case "hair-women-cut":
         return "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80&w=600";
       case "hair-men-cut":
-        return "/src/assets/images/man_transformation_1779552943470.png";
+        return manTransformation;
       case "hair-child-cut":
         return "https://images.unsplash.com/photo-1601814933824-fd0b574dd592?auto=format&fit=crop&q=80&w=600";
       case "hair-fringe":
@@ -44,19 +60,19 @@ export default function ServicesInteractiveGrid({ onSelectService }: ServicesGri
       case "hair-colour":
         return "https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&fit=crop&q=80&w=600";
       case "hair-highlights":
-        return "/src/assets/images/styling_balayage_foils_1779553403460.png";
+        return stylingBalayageFoils;
       case "hair-balayage":
-        return "/src/assets/images/woman_transformation_1779552923773.png";
+        return womanTransformation;
       case "hair-toner":
         return "https://images.unsplash.com/photo-1605497746444-12ded6440f8e?auto=format&fit=crop&q=80&w=600";
       case "hair-root":
         return "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=600";
       case "hair-correction":
-        return "/src/assets/images/woman_transformation_1779552923773.png";
+        return womanTransformation;
       case "hair-keratin":
         return "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&q=80&w=600";
       case "hair-botox":
-        return "/src/assets/images/luxury_salon_wash_1779553381429.png";
+        return luxurySalonWash;
       case "hair-scalp":
         return "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600";
       case "hair-extensions":
@@ -70,7 +86,7 @@ export default function ServicesInteractiveGrid({ onSelectService }: ServicesGri
       case "barber-shave":
         return "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&q=80&w=600";
       case "barber-combo":
-        return "/src/assets/images/man_transformation_1779552943470.png";
+        return manTransformation;
       case "barber-fade":
         return "https://images.unsplash.com/photo-1471466054146-e71bcc0d2bb2?auto=format&fit=crop&q=80&w=600";
       case "barber-head":
@@ -78,7 +94,7 @@ export default function ServicesInteractiveGrid({ onSelectService }: ServicesGri
 
       // Skin & Facial (11 items)
       case "skin-classic":
-        return "/src/assets/images/luxury_salon_wash_1779553381429.png";
+        return luxurySalonWash;
       case "skin-cleansing":
         return "https://images.unsplash.com/photo-1590439471364-192aa70c0b53?auto=format&fit=crop&q=80&w=600";
       case "skin-aging":
@@ -130,7 +146,7 @@ export default function ServicesInteractiveGrid({ onSelectService }: ServicesGri
       case "spa-hot-stone":
         return "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&q=80&w=600";
       case "spa-scalp":
-        return "/src/assets/images/luxury_salon_wash_1779553381429.png";
+        return luxurySalonWash;
       case "spa-back":
         return "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600";
       case "spa-scrub":
@@ -150,21 +166,21 @@ export default function ServicesInteractiveGrid({ onSelectService }: ServicesGri
       case "bridal-mother":
         return "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600";
       case "bridal-groom":
-        return "/src/assets/images/man_transformation_1779552943470.png";
+        return manTransformation;
 
       // Value Packages (6 items)
       case "pkg-refresh":
         return "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&q=80&w=600";
       case "pkg-works":
-        return "/src/assets/images/woman_transformation_1779552923773.png";
+        return womanTransformation;
       case "pkg-pamper":
-        return "/src/assets/images/luxury_styling_chair_1779553424756.png";
+        return luxuryStylingChair;
       case "pkg-couples":
         return "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&q=80&w=600";
       case "pkg-pre-bridal":
         return "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=600";
       case "pkg-mens-groom":
-        return "/src/assets/images/man_transformation_1779552943470.png";
+        return manTransformation;
 
       default:
         // Category fallbacks
@@ -188,7 +204,8 @@ export default function ServicesInteractiveGrid({ onSelectService }: ServicesGri
   };
 
   const filteredServices = SALONS_SERVICES.filter((service) => {
-    const matchesCategory = selectedCategory === "All" || service.category === selectedCategory;
+    const matchesCategory =
+      selectedCategory === "All" || service.category === selectedCategory;
     const matchesSearch =
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase());
@@ -196,7 +213,10 @@ export default function ServicesInteractiveGrid({ onSelectService }: ServicesGri
   });
 
   return (
-    <div id="services_page" className="bg-surface py-12 text-primary px-4 sm:px-6 lg:px-8">
+    <div
+      id="services_page"
+      className="bg-surface py-12 text-primary px-4 sm:px-6 lg:px-8"
+    >
       {/* Page header */}
       <div className="max-w-7xl mx-auto text-center mb-12">
         <span className="text-xs font-mono tracking-[0.25em] text-accent uppercase font-bold">
@@ -206,7 +226,9 @@ export default function ServicesInteractiveGrid({ onSelectService }: ServicesGri
           Our Services Menu
         </h2>
         <p className="text-xs sm:text-sm text-text-muted mt-3 font-light max-w-2xl mx-auto leading-relaxed">
-          Select from our wide suite of specialized unisex barbering, luxury hair styling, clinical facials, skin enhancements, and holistic body massages.
+          Select from our wide suite of specialized unisex barbering, luxury
+          hair styling, clinical facials, skin enhancements, and holistic body
+          massages.
         </p>
         <div className="w-12 h-[1px] bg-accent/40 mx-auto mt-5" />
       </div>
@@ -249,7 +271,11 @@ export default function ServicesInteractiveGrid({ onSelectService }: ServicesGri
           </div>
 
           <div className="text-[11px] font-mono text-text-muted/80 tracking-wider">
-            SHOWING <span className="text-accent font-bold font-sans text-xs">{filteredServices.length}</span> PREMIUM TREATMENT{filteredServices.length === 1 ? "" : "S"}
+            SHOWING{" "}
+            <span className="text-accent font-bold font-sans text-xs">
+              {filteredServices.length}
+            </span>{" "}
+            PREMIUM TREATMENT{filteredServices.length === 1 ? "" : "S"}
           </div>
         </div>
       </div>
@@ -272,7 +298,7 @@ export default function ServicesInteractiveGrid({ onSelectService }: ServicesGri
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
-              
+
               {/* Category tag */}
               <span className="absolute top-4 left-4 text-[9px] tracking-wider font-mono uppercase bg-accent text-primary px-2 py-1 rounded-[4px] font-semibold">
                 {service.category}
@@ -288,7 +314,8 @@ export default function ServicesInteractiveGrid({ onSelectService }: ServicesGri
                   </h4>
                   <div className="flex flex-col items-end shrink-0">
                     <span className="text-xs font-semibold font-mono text-accent">
-                      {formatCAD(service.priceMin)} – {formatCAD(service.priceMax)}
+                      {formatCAD(service.priceMin)} –{" "}
+                      {formatCAD(service.priceMax)}
                     </span>
                   </div>
                 </div>
@@ -308,7 +335,7 @@ export default function ServicesInteractiveGrid({ onSelectService }: ServicesGri
                   </span>
                   <span>* Pre-tax price</span>
                 </div>
-                
+
                 <button
                   onClick={() => onSelectService(service.name)}
                   className="w-full text-center py-2.5 bg-secondary hover:bg-accent text-primary border border-accent/10 rounded-[8px] hover:text-primary transition-all text-[11px] font-mono font-medium tracking-widest uppercase cursor-pointer"
@@ -345,7 +372,9 @@ export default function ServicesInteractiveGrid({ onSelectService }: ServicesGri
             Need a bespoke custom treatment?
           </h4>
           <p className="text-secondary/60 text-xs font-light tracking-wide mt-1 leading-relaxed">
-            Several specialized operations like extensive Bridal Updo combos or full high-fades are custom-quoted based on length or complexity. Talk to coordinates on-site.
+            Several specialized operations like extensive Bridal Updo combos or
+            full high-fades are custom-quoted based on length or complexity.
+            Talk to coordinates on-site.
           </p>
         </div>
         <div className="flex gap-4">
