@@ -1,18 +1,9 @@
 import { useState } from "react";
-import {
-  Search,
-  Scissors,
-  UserCheck,
-  Sparkles,
-  Smile,
-  Clock,
-  MapPin,
-  Badge,
-} from "lucide-react";
+import { Search, Clock } from "lucide-react";
 import { SALONS_SERVICES } from "../../lib/constants";
 import { formatCAD } from "../../lib/formatters";
 import AnimatedSection from "../shared/AnimatedSection";
-import { motion } from "motion/react";
+
 import luxurySalonWash from "../../assets/images/luxury_salon_wash_1779553381429.png";
 import luxuryStylingChair from "../../assets/images/luxury_styling_chair_1779553424756.png";
 import manTransformation from "../../assets/images/man_transformation_1779552943470.png";
