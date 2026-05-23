@@ -53,6 +53,23 @@ Then open the local app at `http://localhost:3000`.
 - `npm run clean` — remove generated build files
 - `npm run lint` — run TypeScript type checking
 
+## 🚀 Vercel Deployment
+
+This project is configured for Vercel deployment as a static Vite app.
+
+- **Build command**: `npm run build`
+- **Output directory**: `dist`
+- **Framework preset**: Vite
+
+A `vercel.json` file is included to ensure the single-page app always falls back to `index.html`.
+
+To deploy:
+
+1. Connect the repository in Vercel.
+2. Set the build command to `npm run build`.
+3. Set the output directory to `dist`.
+4. Deploy the project.
+
 ## ✨ Notes
 
 - The app is optimized for a luxury salon brand presentation with modern motion effects and polished UI elements.
