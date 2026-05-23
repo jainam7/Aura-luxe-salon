@@ -1,4 +1,14 @@
-import { Sparkles, Heart, Award, Shield, Smile, Globe, Scissors, Smartphone, Compass } from "lucide-react";
+import {
+  Sparkles,
+  Heart,
+  Award,
+  Shield,
+  Smile,
+  Globe,
+  Scissors,
+  Smartphone,
+  Compass,
+} from "lucide-react";
 import { SALONS_TEAM } from "../../lib/constants";
 import AnimatedSection from "../shared/AnimatedSection";
 
@@ -56,8 +66,10 @@ export default function AboutView() {
             Our Brand Story
           </h2>
           <div className="w-12 h-[1px] bg-accent/40 mx-auto mt-4" />
-          <p className="text-sm text-secondary/70 font-light mt-6 max-w-2xl mx-auto leading-relaxed">
-            Founded in Toronto, Canada in 2016, Aura Unisex Salon was built upon a humble vision: to construct an inclusive, ultra-hygienic oasis where luxury hospitality and clean beauty meet.
+          <p className="text-base text-secondary/75 font-light mt-6 max-w-2xl mx-auto leading-relaxed">
+            Founded in Toronto, Canada in 2016, Aura Unisex Salon was built upon
+            a humble vision: to construct an inclusive, ultra-hygienic oasis
+            where luxury hospitality and clean beauty meet.
           </p>
         </div>
       </section>
@@ -89,7 +101,7 @@ export default function AboutView() {
                 <h4 className="font-serif text-lg font-semibold tracking-wide text-primary mb-2">
                   {v.title}
                 </h4>
-                <p className="text-xs text-text-muted leading-relaxed font-light">
+                <p className="text-sm text-text-muted leading-relaxed font-light">
                   {v.desc}
                 </p>
               </AnimatedSection>
@@ -108,8 +120,10 @@ export default function AboutView() {
             <h3 className="font-serif text-3xl sm:text-4xl font-light tracking-tight mt-2 text-primary">
               Certified Master Artisans
             </h3>
-            <p className="text-xs sm:text-sm text-text-muted mt-3 font-light max-w-xl mx-auto leading-relaxed">
-              Our diverse, multicultural styling team is highly experienced and bilingual. We are fully licensed to design beauty tailored exactly for you.
+            <p className="text-sm sm:text-base text-text-muted mt-3 font-light max-w-xl mx-auto leading-relaxed">
+              Our diverse, multicultural styling team is highly experienced and
+              bilingual. We are fully licensed to design beauty tailored exactly
+              for you.
             </p>
           </div>
 
@@ -154,10 +168,12 @@ export default function AboutView() {
                   <p className="text-[11px] font-mono tracking-wider text-accent uppercase font-medium mb-3">
                     {stylist.role}
                   </p>
-                  
+
                   <div className="flex items-center justify-between text-[11px] text-text-muted pt-3 border-t border-border-custom font-mono">
                     <span>Exp: {stylist.experience}</span>
-                    <span className="text-accent-light bg-accent/5 px-2 py-0.5 rounded-[4px] border border-accent/10">Active Designer</span>
+                    <span className="text-accent-light bg-accent/5 px-2 py-0.5 rounded-[4px] border border-accent/10">
+                      Active Designer
+                    </span>
                   </div>
                 </div>
               </AnimatedSection>
@@ -183,10 +199,16 @@ export default function AboutView() {
             <div className="absolute -left-10 mt-1.5 w-7 h-7 rounded-full bg-primary border-2 border-accent flex items-center justify-center text-accent text-xs">
               •
             </div>
-            <span className="text-xs font-mono text-accent font-bold">NOV 2016</span>
-            <h4 className="font-serif text-lg font-medium text-primary mt-1">Founding in downtown Toronto</h4>
-            <p className="text-xs text-text-muted font-light leading-relaxed mt-2">
-              Opened our tiny 4-chair studio on Queen Street West, launching with the core value of clean beauty and direct transparent CAD pricing.
+            <span className="text-xs font-mono text-accent font-bold">
+              NOV 2016
+            </span>
+            <h4 className="font-serif text-lg font-medium text-primary mt-1">
+              Founding in downtown Toronto
+            </h4>
+            <p className="text-sm text-text-muted font-light leading-relaxed mt-2">
+              Opened our tiny 4-chair studio on Queen Street West, launching
+              with the core value of clean beauty and direct transparent CAD
+              pricing.
             </p>
           </div>
 
@@ -195,10 +217,16 @@ export default function AboutView() {
             <div className="absolute -left-10 mt-1.5 w-7 h-7 rounded-full bg-primary border-2 border-accent flex items-center justify-center text-accent text-xs">
               •
             </div>
-            <span className="text-xs font-mono text-accent font-bold">AUG 2019</span>
-            <h4 className="font-serif text-lg font-medium text-primary mt-1">Expanding to 12 design chairs</h4>
-            <p className="text-xs text-text-muted font-light leading-relaxed mt-2">
-              Relocated to Main Street with luxury glass-enclosed aesthetic rooms, adding our premier Massage and straight-razor Barbering lounges.
+            <span className="text-xs font-mono text-accent font-bold">
+              AUG 2019
+            </span>
+            <h4 className="font-serif text-lg font-medium text-primary mt-1">
+              Expanding to 12 design chairs
+            </h4>
+            <p className="text-sm text-text-muted font-light leading-relaxed mt-2">
+              Relocated to Main Street with luxury glass-enclosed aesthetic
+              rooms, adding our premier Massage and straight-razor Barbering
+              lounges.
             </p>
           </div>
 
@@ -207,10 +235,15 @@ export default function AboutView() {
             <div className="absolute -left-10 mt-1.5 w-7 h-7 rounded-full bg-primary border-2 border-accent flex items-center justify-center text-accent text-xs">
               •
             </div>
-            <span className="text-xs font-mono text-accent font-bold">OCT 2022</span>
-            <h4 className="font-serif text-lg font-medium text-primary mt-1">CBF Salon of the Year Finalist</h4>
-            <p className="text-xs text-text-muted font-light leading-relaxed mt-2">
-              Nominated by the Canadian Beauty Federation (CBF) for our pioneering clean hydration organic treatments.
+            <span className="text-xs font-mono text-accent font-bold">
+              OCT 2022
+            </span>
+            <h4 className="font-serif text-lg font-medium text-primary mt-1">
+              CBF Salon of the Year Finalist
+            </h4>
+            <p className="text-sm text-text-muted font-light leading-relaxed mt-2">
+              Nominated by the Canadian Beauty Federation (CBF) for our
+              pioneering clean hydration organic treatments.
             </p>
           </div>
 
@@ -219,10 +252,15 @@ export default function AboutView() {
             <div className="absolute -left-10 mt-1.5 w-7 h-7 rounded-full bg-accent text-primary flex items-center justify-center text-xs">
               ✓
             </div>
-            <span className="text-xs font-mono text-accent font-bold">MAR 2024</span>
-            <h4 className="font-serif text-lg font-semibold text-accent mt-1">Province Board Certification</h4>
-            <p className="text-xs text-text-muted font-light leading-relaxed mt-2">
-              Acknowledged by the Provincial Cosmetology Board for maintaining perfect scores in overall guest sanitization tests.
+            <span className="text-xs font-mono text-accent font-bold">
+              MAR 2024
+            </span>
+            <h4 className="font-serif text-lg font-semibold text-accent mt-1">
+              Province Board Certification
+            </h4>
+            <p className="text-sm text-text-muted font-light leading-relaxed mt-2">
+              Acknowledged by the Provincial Cosmetology Board for maintaining
+              perfect scores in overall guest sanitization tests.
             </p>
           </div>
         </div>
@@ -233,18 +271,30 @@ export default function AboutView() {
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-around gap-12 opacity-60">
           <div className="flex flex-col items-center">
             <Award className="w-10 h-10 text-accent mb-2" />
-            <span className="text-[10px] font-mono tracking-widest text-primary font-bold">CANADIAN BEAUTY FEDERATION</span>
-            <span className="text-[9px] text-text-muted">AURA CHARTER MEMBER</span>
+            <span className="text-[10px] font-mono tracking-widest text-primary font-bold">
+              CANADIAN BEAUTY FEDERATION
+            </span>
+            <span className="text-[9px] text-text-muted">
+              AURA CHARTER MEMBER
+            </span>
           </div>
           <div className="flex flex-col items-center">
             <Shield className="w-10 h-10 text-accent mb-2" />
-            <span className="text-[10px] font-mono tracking-widest text-primary font-bold">PROVINCIAL COSMETOLOGY BOARD</span>
-            <span className="text-[9px] text-text-muted">CERTIFIED A+ SANITIZED</span>
+            <span className="text-[10px] font-mono tracking-widest text-primary font-bold">
+              PROVINCIAL COSMETOLOGY BOARD
+            </span>
+            <span className="text-[9px] text-text-muted">
+              CERTIFIED A+ SANITIZED
+            </span>
           </div>
           <div className="flex flex-col items-center">
             <Sparkles className="w-10 h-10 text-accent mb-2" />
-            <span className="text-[10px] font-mono tracking-widest text-primary font-bold">BEST OF CITY 2023 WINNER</span>
-            <span className="text-[9px] text-text-muted">CATEGORY: LUXURY HOSPITALITY</span>
+            <span className="text-[10px] font-mono tracking-widest text-primary font-bold">
+              BEST OF CITY 2023 WINNER
+            </span>
+            <span className="text-[9px] text-text-muted">
+              CATEGORY: LUXURY HOSPITALITY
+            </span>
           </div>
         </div>
       </section>

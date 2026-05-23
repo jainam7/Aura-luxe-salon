@@ -310,7 +310,7 @@ export default function ServicesInteractiveGrid({
                     </span>
                   </div>
                 </div>
-                <p className="text-xs text-text-muted font-light leading-relaxed">
+                <p className="text-[13px] sm:text-sm text-text-muted font-light leading-relaxed">
                   {service.description}
                 </p>
               </div>

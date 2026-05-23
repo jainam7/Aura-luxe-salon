@@ -120,7 +120,7 @@ export default function ServicesCarousel({
             <h3 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight mt-2 text-primary">
               Bespoke Services Showcase
             </h3>
-            <p className="text-xs sm:text-sm text-text-muted mt-3 font-light leading-relaxed">
+            <p className="text-sm sm:text-base text-text-muted mt-3 font-light leading-relaxed">
               Explore some of our signature luxurious treatments, designed by
               our master stylists. Tap "Explore Services" for current rates.
             </p>
@@ -186,7 +186,7 @@ export default function ServicesCarousel({
                         From {formatCAD(item.price)}
                       </span>
                     </div>
-                    <p className="text-[12px] text-text-muted leading-relaxed font-light">
+                    <p className="text-[13px] sm:text-[14px] text-text-muted leading-relaxed font-light">
                       {item.desc}
                     </p>
                   </div>

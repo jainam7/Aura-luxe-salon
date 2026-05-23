@@ -80,7 +80,7 @@ export default function TransformationShowcase() {
           <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light tracking-tight mt-2 text-primary">
             Before & After Transformations
           </h3>
-          <p className="text-xs sm:text-sm text-text-muted mt-3 font-light max-w-xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-text-muted mt-3 font-light max-w-xl mx-auto leading-relaxed">
             Witness the real, high-contrast, premium transformations crafted
             daily in our salons. Beauty is a precise alignment of identity and
             artistry.
@@ -178,7 +178,7 @@ export default function TransformationShowcase() {
                   {active.subtitle}
                 </p>
 
-                <p className="text-xs sm:text-sm text-text-muted mt-5 font-light leading-relaxed">
+                <p className="text-sm text-text-muted mt-5 font-light leading-relaxed">
                   {active.description}
                 </p>
 

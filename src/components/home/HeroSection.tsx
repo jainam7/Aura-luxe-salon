@@ -1,12 +1,13 @@
 import { motion } from "motion/react";
 import { Sparkles, Calendar, ChevronRight } from "lucide-react";
+import type { Variants } from "motion/react";
 
 interface HeroSectionProps {
   onInteract: (targetTab: string) => void;
 }
 
 export default function HeroSection({ onInteract }: HeroSectionProps) {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -17,7 +18,7 @@ export default function HeroSection({ onInteract }: HeroSectionProps) {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -27,7 +28,10 @@ export default function HeroSection({ onInteract }: HeroSectionProps) {
   };
 
   return (
-    <section id="hero_section" className="relative h-[85vh] min-h-[600px] lg:h-[95vh] w-full flex items-center justify-center overflow-hidden bg-primary px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 md:pt-0">
+    <section
+      id="hero_section"
+      className="relative h-[85vh] min-h-[600px] lg:h-[95vh] w-full flex items-center justify-center overflow-hidden bg-primary px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 md:pt-0"
+    >
       {/* Cinematic Cover Background (Unsplash Premium Luxury Beauty Fallback) */}
       <div className="absolute inset-0 z-0">
         <img
@@ -77,9 +81,11 @@ export default function HeroSection({ onInteract }: HeroSectionProps) {
 
         <motion.p
           variants={itemVariants}
-          className="text-secondary/70 text-xs sm:text-sm md:text-base font-light tracking-wider max-w-2xl mt-6 leading-relaxed"
+          className="text-secondary/85 text-sm sm:text-base md:text-[17px] font-light tracking-wider max-w-2xl mt-6 leading-relaxed"
         >
-          Discover cutting-edge scissor work, bespoke hand-painted balayage, and restorative spa treatments designed for Canada's multicultural tapestry. Elevate your alignment in an atmosphere of refined luxury.
+          Discover cutting-edge scissor work, bespoke hand-painted balayage, and
+          restorative spa treatments designed for Canada's multicultural
+          tapestry. Elevate your alignment in an atmosphere of refined luxury.
         </motion.p>
 
         {/* Actions Button Group */}
