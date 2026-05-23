@@ -1,0 +1,6 @@
+{
+  "name": "Aura Unisex Salon",
+  "description": "Premium Canadian unisex salon and spa experience, featuring luxury hair, beard, skin, nails, massage, and bridal services in CA$ pricing with en-CA local details.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
